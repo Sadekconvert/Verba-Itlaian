@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VerbaItalia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Manrope', 'sans-serif'],
+            },
+            colors: {
+              'verba-green': {
+                light: '#F0F3EC',
+                DEFAULT: '#A3B18A',
+                dark: '#587444'
+              },
+              'verba-terracotta': {
+                light: '#FCEAE7',
+                DEFAULT: '#D98C7E',
+                dark: '#B06355'
+              },
+              'verba-navy': {
+                light: '#4E6A85',
+                DEFAULT: '#2C3E50',
+                dark: '#1B2631'
+              },
+              'verba-beige': '#F4F1DE',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"], 
+        textarea, 
+        select {
+            background-color: rgba(244, 241, 222, 0.05) !important;
+            border-color: rgba(244, 241, 222, 0.2) !important;
+            color: #F4F1DE !important;
+        }
+        input::placeholder, 
+        textarea::placeholder {
+            color: rgba(244, 241, 222, 0.5) !important;
+        }
+        input[type="checkbox"] {
+            background-color: transparent;
+            border-color: rgba(244, 241, 222, 0.4);
+        }
+        input[type="checkbox"]:checked {
+            background-color: #D98C7E !important;
+            border-color: #D98C7E !important;
+        }
+        datalist {
+            color: #1B2631;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
+        @keyframes typing-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+        .typing-dot {
+            animation: typing-bounce 1.2s infinite ease-in-out;
+        }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+  }
+}
+</script>
+</head>
+  <body class="bg-verba-navy-dark text-verba-beige font-sans antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
